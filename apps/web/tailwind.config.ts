@@ -3,8 +3,15 @@
 import type { Config } from "tailwindcss";
 import sharedConfig from "@repo/tailwind-config";
 
-const config: Pick<Config, "content" | "presets"> = {
+const config: Pick<Config, "content" | "presets" | "theme"> = {
   content: ["./app/**/*.tsx"],
+  theme: {
+    extend: {
+      colors: {
+        "try": "green",
+      },
+    },
+  },
   presets: [sharedConfig],
 };
 
